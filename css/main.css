@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  background-color: hsl(210, 46%, 95%);
+}
+
+main {
+  max-width: 425px;
+  width: 360px;
+  z-index: 0;
+}
+main .section--card {
+  width: 320px;
+  height: 90%;
+  margin: auto;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .section--card .card--header {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  border-radius: 10px 10px 0px 0px;
+}
+main .section--card .card--header img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s linear;
+}
+main .section--card .card--header img:hover {
+  transform: scale(1.2);
+}
+main .section--card .card--body {
+  padding: 30px;
+  padding-bottom: 0px;
+  background-color: white;
+  position: relative;
+  border-radius: 0px 0px 10px 10px;
+}
+main .section--card .card--body :nth-child(1) {
+  font-weight: 700;
+  line-height: 25px;
+  font-size: 1.5rem;
+  color: hsl(217, 19%, 35%);
+  margin-bottom: 10px;
+}
+main .section--card .card--body :nth-child(2) {
+  font-weight: 500;
+  line-height: 20px;
+  font-size: 1.3rem;
+  color: hsl(212, 23%, 69%);
+  margin-bottom: 20px;
+}
+main .section--card .card--body .card--footer-social-user {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  margin-top: 30px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  position: relative;
+  transition: all 0.1s ease-in-out;
+}
+main .section--card .card--body .card--footer-social-user .user--img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0px;
+}
+main .section--card .card--body .card--footer-social-user .user--img .ico-user {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-image: url("../images/avatar-michelle.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 100%;
+}
+main .section--card .card--body .card--footer-social-user .user--img .user--data {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+  margin-bottom: 0px;
+}
+main .section--card .card--body .card--footer-social-user .user--img .user--data .span_user_date {
+  color: hsl(212, 23%, 69%);
+}
+main .section--card .card--body .card--footer-social-user .user--img .user--data .span_name {
+  font-weight: 700;
+  line-height: 25px;
+  font-size: 1.3rem;
+  color: hsl(217, 19%, 35%);
+  margin-bottom: 0px;
+}
+main .section--card .card--body .card--footer-social-user .but_inactive {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  background-color: hsl(210, 46%, 95%);
+  border: none;
+  margin-bottom: 0px;
+}
+main .section--card .card--body .card--footer-social-user .but_but {
+  background-color: hsl(214, 17%, 51%);
+  margin-bottom: 0px;
+  border: 1px solid hsl(210, 46%, 95%);
+}
+main .section--card .card--body .card--footer-social-user .but_but svg path {
+  fill: white;
+}
+main .section--card .card--body .card--footer-share {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  border-radius: 0px 0px 10px 10px;
+  background-color: hsl(217, 19%, 35%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+main .section--card .card--body .card--footer-share span {
+  font-weight: 500;
+  letter-spacing: 5px;
+  color: hsl(212, 23%, 69%);
+  margin-right: 18px;
+  margin: 0px;
+}
+main .section--card .card--body .card--footer-share .networks--social {
+  display: flex;
+  gap: 10px;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0px;
+}
+main .section--card .card--body .card--footer-share .networks--social .ico-facebook, main .section--card .card--body .card--footer-share .networks--social .ico--pinterest, main .section--card .card--body .card--footer-share .networks--social .ico--twitter {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/icon-facebook.svg");
+  background-repeat: no-repeat;
+  margin: 0px;
+  cursor: pointer;
+}
+main .section--card .card--body .card--footer-share .networks--social .ico--twitter {
+  background-image: url("../images/icon-twitter.svg");
+  cursor: pointer;
+}
+main .section--card .card--body .card--footer-share .networks--social .ico--pinterest {
+  background-image: url("../images/icon-pinterest.svg");
+  cursor: pointer;
+}
+main .section--card .card--body .card--footer-share #but_active {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  background-color: hsl(214, 17%, 51%);
+  border: 1px solid hsl(214, 17%, 51%);
+  border: none;
+  margin-bottom: 0px;
+}
+main .section--card .card--body .card--footer-share #but_active svg path {
+  fill: white;
+}
+main .section--card .card--body .card--footer-share .but_but {
+  background-color: hsl(217, 19%, 35%);
+}
+main .section--card .card--body .card--footer-share .but_but svg path {
+  fill: white;
+}
+
+@media (min-width: 1440px) {
+  main {
+    max-width: none;
+    width: 900px;
+  }
+  main .section--card {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  main .section--card .card--header {
+    border-radius: 10px 0px 0px 10px;
+    width: 250px;
+    height: 255px;
+  }
+  main .section--card .card--header img {
+    width: 110%;
+    background-position: left;
+    background-size: contain;
+  }
+  main .section--card .card--body {
+    width: 450px;
+    height: 255px;
+    padding: 20px 40px;
+    border-radius: 0px 10px 10px 0px;
+  }
+  main .section--card .card--body .card--footer-share {
+    border-radius: 15px;
+    width: -moz-fit-content;
+    width: fit-content;
+    left: 250px;
+    top: 90px;
+    opacity: 0;
+    z-index: -1;
+  }
+  main .section--card .card--body .card--footer-share .networks--social {
+    gap: 20px;
+  }
+  main .section--card .card--body .card--footer-share #but_active {
+    display: none;
+  }
+  main .section--card .card--body .card--footer-share::after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 130px;
+    top: 60px;
+    border-left: 25px solid hsl(217, 19%, 35%);
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    transform: rotate(90deg);
+  }
+  main .section--card .card--body .show-net {
+    transition: all 0.3s linear;
+    opacity: 1;
+    z-index: 3;
+  }
+}/*# sourceMappingURL=main.css.map */

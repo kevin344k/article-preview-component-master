@@ -1,0 +1,304 @@
+//# Front-end Style Guide article-preview-component-master
+
+//## Layout
+
+//The designs were created to the following widths:
+
+//- Mobile: 375px
+//- Desktop: 1440px
+
+//## Colors
+
+$Very_Dark_Grayish_Blue: hsl(217, 19%, 35%);
+$Desaturated_Dark_Blue: hsl(214, 17%, 51%);
+$Grayish_Blue: hsl(212, 23%, 69%);
+$Light_Grayish_Blue: hsl(210, 46%, 95%);
+
+//## Typography
+
+//### Body Copy
+
+$Font_size: 1.3rem;
+$font_family-manrope: "Manrope", sans-serif;
+//### Headings
+
+//- Family: [Manrope](https://fonts.google.com/specimen/Manrope)
+//- Weights: 500, 700
+
+//## Icons
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  font-family: $font_family-manrope;
+  font-size: $Font_size;
+  font-weight: 500;
+  background-color: $Light_Grayish_Blue;
+}
+main {
+  max-width: 425px;
+  width: 360px;
+
+  z-index: 0;
+  .section--card {
+    width: 320px;
+    height: 90%;
+    margin: auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .card--header {
+      width: 100%;
+      height: 280px;
+      overflow: hidden;
+      border-radius: 10px 10px 0px 0px;
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        transition: all 0.5s linear;
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+    .card--body {
+      padding: 30px;
+      padding-bottom: 0px;
+      background-color: white;
+      position: relative;
+      border-radius: 0px 0px 10px 10px;
+      :nth-child(1) {
+        font-weight: 700;
+        line-height: 25px;
+        font-size: 1.5rem;
+        color: $Very_Dark_Grayish_Blue;
+        margin-bottom: 10px;
+      }
+      :nth-child(2) {
+        font-weight: 500;
+        line-height: 20px;
+        font-size: $Font_size;
+        color: $Grayish_Blue;
+        margin-bottom: 20px;
+      }
+
+      .card--footer-social-user {
+        width: 100%;
+        height: 70px;
+        display: flex;
+        margin-top: 30px;
+
+        justify-content: space-between;
+        align-items: center;
+
+        background-color: white;
+        position: relative;
+        transition: all 0.1s ease-in-out;
+        .user--img {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 0px;
+          .ico-user {
+            display: block;
+            width: 40px;
+            height: 40px;
+            background-image: url("../images/avatar-michelle.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            border-radius: 100%;
+          }
+
+          .user--data {
+            display: flex;
+            flex-direction: column;
+            margin-left: 15px;
+            margin-bottom: 0px;
+            .span_user_date {
+              color: $Grayish_Blue;
+            }
+            .span_name {
+              font-weight: 700;
+              line-height: 25px;
+              font-size: $Font_size;
+              color: $Very_Dark_Grayish_Blue;
+              margin-bottom: 0px;
+            }
+          }
+        }
+        .but_inactive {
+          width: 35px;
+          height: 35px;
+          border-radius: 100%;
+          background-color: $Light_Grayish_Blue;
+          border: none;
+          margin-bottom: 0px;
+        }
+        .but_but {
+          background-color: $Desaturated_Dark_Blue;
+          margin-bottom: 0px;
+          border: 1px solid $Light_Grayish_Blue;
+
+          svg {
+            path {
+              fill: white;
+            }
+          }
+        }
+      }
+
+      .card--footer-share {
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 30px;
+        border-radius: 0px 0px 10px 10px;
+        background-color: $Very_Dark_Grayish_Blue;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        span {
+          font-weight: 500;
+          letter-spacing: 5px;
+          color: $Grayish_Blue;
+          margin-right: 18px;
+          margin: 0px;
+        }
+
+        .networks--social {
+          display: flex;
+          gap: 10px;
+          vertical-align: middle;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 0px;
+          .ico-facebook {
+            display: block;
+            width: 20px;
+            height: 20px;
+            background-image: url("../images/icon-facebook.svg");
+            background-repeat: no-repeat;
+            margin: 0px;
+            cursor: pointer
+          }
+          .ico--twitter {
+            @extend .ico-facebook;
+            background-image: url("../images/icon-twitter.svg");
+            cursor: pointer
+          }
+          .ico--pinterest {
+            @extend .ico-facebook;
+            background-image: url("../images/icon-pinterest.svg");
+            cursor: pointer
+          }
+        }
+        #but_active {
+          width: 35px;
+          height: 35px;
+          border-radius: 100%;
+          background-color: $Desaturated_Dark_Blue;
+          border: 1px solid $Desaturated_Dark_Blue;
+          border: none;
+
+          margin-bottom: 0px;
+          svg {
+            path {
+              fill: white;
+            }
+          }
+        }
+    
+        .but_but {
+          background-color: $Very_Dark_Grayish_Blue;
+          svg {
+            path {
+              fill: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  main {
+    max-width: none;
+    width: 900px;
+    .section--card {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      .card--header {
+        border-radius: 10px 0px 0px 10px;
+        width: 250px;
+        height: 255px;
+        img {
+          width: 110%;
+          background-position: left;
+          background-size: contain;
+        }
+      }
+
+      .card--body {
+        width: 450px;
+        height: 255px;
+        padding: 20px 40px;
+        border-radius: 0px 10px 10px 0px;
+        .card--footer-share {
+          border-radius: 15px;
+          width: fit-content;
+          left: 250px;
+          top: 90px;
+          opacity: 0;
+          z-index: -1;
+          .networks--social {
+            gap: 20px;
+          }
+          #but_active {
+            display: none;
+          }
+          &::after {
+            content: "";
+            width: 0;
+            height: 0;
+            position: absolute;
+            left: 130px;
+            top: 60px;
+
+            border-left: 25px solid $Very_Dark_Grayish_Blue;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            transform: rotate(90deg);
+          }
+        }
+        .show-net{
+          transition: all .3s linear;
+          opacity: 1;
+          z-index: 3;
+        }
+
+      }
+    }
+  }
+}
